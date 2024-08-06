@@ -1,4 +1,14 @@
-# terraform_ec2_jenkins with instalatio of tools like docker, terraform, aws, eksctl, kubectl
+# terraform_ec2_jenkins with installation of tools and command  like docker, terraform, aws, eksctl, kubectl
+
+Do some modifications to the backend.tf file such as changing the bucket name and dynamodb table(make sure you manually created both on AWS Cloud).
+
+Go to the DynamoDB console: https://console.aws.amazon.com/dynamodb/
+Click "Create table".
+Configure the table:
+Table name: Choose a name (e.g., terraform-locks).
+Primary key: Set the primary key to LockID (String).
+
+
 Initialize the backend by running the below command
 
 cd terraform_ec2_jenkins
